@@ -12,7 +12,6 @@ import { useLanguage } from "@/contexts/LanguageContext"
 import { Button } from "@/components/ui/button"
 import PhotoUploadSection from "@/components/photo-upload-section"
 import RSVPSection from "@/components/rsvp-section"
-import LoveStoryGallery from "@/components/love-story-gallery"
 
 // Format date in Arabic or English
 const formatDate = (date: Date, locale: string) => {
@@ -640,8 +639,6 @@ export default function ProAnimatedEngagementPage({ onImageLoad, introFinished }
         </div>
       </motion.section>
 
-      {/* Love Story Gallery Section */}
-      <LoveStoryGallery />
 
       {/* Message Section */}
       <HandwrittenMessage />
