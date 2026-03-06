@@ -18,18 +18,18 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mahmoud-gehad.netlify.app"),
+  metadataBase: new URL("https://mohmed-menna.digitivaa.com/"),
   title: "Mohamed & Menna - Engagement Celebration",
   description: "Join us in celebrating our engagement",
   generator: "Digitiva",
   openGraph: {
-    url: "https://mahmoud-gehad.netlify.app/",
+    url: "https://mohmed-menna.digitivaa.com/",
     type: "website",
     title: "Mohamed & Menna - Engagement Celebration",
     description: "Join us in celebrating our engagement",
     images: [
       {
-        url: "https://mahmoud-gehad.netlify.app/invitation-design.png",
+        url: "https://mohmed-menna.digitivaa.com/invitation-design.png",
         width: 768,
         height: 1365,
         alt: "Mohamed & Menna Engagement Invitation",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mohamed & Menna - Engagement Celebration",
     description: "Join us in celebrating our engagement",
-    images: ["https://mahmoud-gehad.netlify.app/invitation-design.png"],
+    images: ["https://mohmed-menna.digitivaa.com/invitation-design.png"],
   },
   icons: {
     icon: "/invitation-design.png",
@@ -57,13 +57,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* ✅ Open Graph tags for Facebook & WhatsApp previews */}
-        <meta property="og:url" content="https://mahmoud-gehad.netlify.app/" />
+        <meta property="og:url" content="https://mohmed-menna.digitivaa.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Mohamed & Menna - Engagement Celebration" />
         <meta property="og:description" content="Join us in celebrating our engagement" />
         <meta
           property="og:image"
-          content="https://mahmoud-gehad.netlify.app/invitation-design.png"
+          content="https://mohmed-menna.digitivaa.com/invitation-design.png"
         />
         <meta property="og:image:width" content="768" />
         <meta property="og:image:height" content="1365" />
@@ -74,7 +74,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mohamed & Menna - Engagement Celebration" />
         <meta name="twitter:description" content="Join us in celebrating our engagement" />
-        <meta name="twitter:image" content="https://mahmoud-gehad.netlify.app/invitation-design.png" />
+        <meta name="twitter:image" content="https://mohmed-menna.digitivaa.com/invitation-design.png" />
 
         {/* Preload PNG with high priority to eliminate lag on Netlify */}
         <link
