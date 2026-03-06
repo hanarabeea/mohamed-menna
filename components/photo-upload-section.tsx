@@ -12,7 +12,7 @@ const fadeIn: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { 
+    transition: {
       duration: 0.8,
       ease: [0.22, 1, 0.36, 1] as const
     }
@@ -38,8 +38,8 @@ const flyFromLeft: Variants = {
     opacity: 1,
     scale: 1,
     rotate: 0,
-    transition: { 
-      duration: 1.4, 
+    transition: {
+      duration: 1.4,
       ease: [0.16, 1, 0.3, 1] as const,
       type: "spring",
       stiffness: 60,
@@ -55,8 +55,8 @@ const flyFromRight: Variants = {
     opacity: 1,
     scale: 1,
     rotate: 0,
-    transition: { 
-      duration: 1.4, 
+    transition: {
+      duration: 1.4,
       ease: [0.16, 1, 0.3, 1] as const,
       type: "spring",
       stiffness: 60,
@@ -76,15 +76,15 @@ const fastStaggerContainer: Variants = {
 export default function PhotoUploadSection() {
   const t = useTranslation()
   const { language } = useLanguage()
-  
-  const driveLink = "https://drive.google.com/drive/folders/1GB8dqEoMXbY8KpLRnta-o1vgBD4VsWeh"
+
+  const driveLink = "https://drive.google.com/drive/folders/1oxEL5mAIRJI1QixzH9bLoejeQD2PkIUb"
 
   const handleUploadClick = () => {
     window.open(driveLink, "_blank")
   }
 
   return (
-    <motion.section 
+    <motion.section
       className="relative py-20 px-4 md:py-32 bg-gradient-to-b from-transparent via-accent/5 to-transparent overflow-hidden"
       initial="hidden"
       whileInView="visible"
@@ -92,14 +92,14 @@ export default function PhotoUploadSection() {
       variants={fastStaggerContainer}
     >
       {/* Animated Decorative Elements */}
-      <motion.div 
+      <motion.div
         className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"
         initial={{ x: 300, opacity: 0, scale: 0.5 }}
         whileInView={{ x: 0, opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.8, ease: "easeOut" }}
       />
-      <motion.div 
+      <motion.div
         className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"
         initial={{ x: -300, opacity: 0, scale: 0.5 }}
         whileInView={{ x: 0, opacity: 1, scale: 1 }}
@@ -108,19 +108,19 @@ export default function PhotoUploadSection() {
       />
 
       <div className="relative max-w-6xl mx-auto">
-        <motion.div 
+        <motion.div
           className="text-center mb-20"
           variants={fastStaggerContainer}
         >
           <motion.div className="flex items-center justify-center gap-4 mb-8" variants={flyFromLeft}>
-            <motion.div 
+            <motion.div
               className="w-32 h-px bg-gradient-to-r from-transparent via-accent to-transparent"
               initial={{ scaleX: 0, originX: 1 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.2 }}
             />
-            <motion.div 
+            <motion.div
               className="relative"
               initial={{ scale: 0, rotate: -180 }}
               whileInView={{ scale: 1, rotate: 0 }}
@@ -129,7 +129,7 @@ export default function PhotoUploadSection() {
             >
               <Camera className="w-6 h-6 text-accent" />
             </motion.div>
-            <motion.div 
+            <motion.div
               className="w-32 h-px bg-gradient-to-r from-transparent via-accent to-transparent"
               initial={{ scaleX: 0, originX: 0 }}
               whileInView={{ scaleX: 1 }}
@@ -137,25 +137,25 @@ export default function PhotoUploadSection() {
               transition={{ duration: 1.2, delay: 0.2 }}
             />
           </motion.div>
-          <motion.h2 
-            className="font-luxury text-5xl md:text-6xl lg:text-7xl text-foreground leading-tight mb-4 tracking-wide" 
+          <motion.h2
+            className="font-luxury text-5xl md:text-6xl lg:text-7xl text-foreground leading-tight mb-4 tracking-wide"
             variants={flyFromRight}
           >
             {t('sharePhotosTitle')}
           </motion.h2>
-          <motion.p 
-            className="font-luxury text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto italic" 
+          <motion.p
+            className="font-luxury text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto italic"
             variants={scaleIn}
           >
             {t('sharePhotosDescription')}
           </motion.p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="max-w-3xl mx-auto"
           variants={scaleIn}
         >
-          <motion.div 
+          <motion.div
             className="relative bg-gradient-to-br from-card via-card/95 to-card/90 backdrop-blur-md border-2 border-accent/20 rounded-3xl p-10 md:p-14 shadow-2xl overflow-hidden"
             initial={{ scale: 0.9, opacity: 0, y: 50 }}
             whileInView={{ scale: 1, opacity: 1, y: 0 }}
@@ -163,24 +163,24 @@ export default function PhotoUploadSection() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             {/* Animated Decorative corner elements */}
-            <motion.div 
+            <motion.div
               className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-accent/30 rounded-tl-3xl"
               initial={{ x: -50, y: -50, opacity: 0 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.3 }}
             />
-            <motion.div 
+            <motion.div
               className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-accent/30 rounded-br-3xl"
               initial={{ x: 50, y: 50, opacity: 0 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.3 }}
             />
-            
+
             <div className="relative z-10">
               {/* QR Code Section */}
-              <motion.div 
+              <motion.div
                 className="flex flex-col items-center mb-10"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -188,10 +188,10 @@ export default function PhotoUploadSection() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <div className="bg-white p-6 rounded-2xl shadow-lg mb-6 border-2 border-accent/10">
-                  <Image 
-                    src="/qr-code.png" 
-                    alt="QR Code" 
-                    width={200} 
+                  <Image
+                    src="/qr-code.png"
+                    alt="QR Code"
+                    width={200}
                     height={200}
                     className="w-[200px] h-[200px]"
                   />
@@ -205,7 +205,7 @@ export default function PhotoUploadSection() {
               </motion.div>
 
               {/* Divider */}
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-4 my-10"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
@@ -249,8 +249,8 @@ export default function PhotoUploadSection() {
                     <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                   </svg>
                   <p className="font-luxury text-sm md:text-base text-center italic">
-                    {language === 'ar' 
-                      ? 'التقطوا صوراً خلال الحفل وارفعوها هنا' 
+                    {language === 'ar'
+                      ? 'التقطوا صوراً خلال الحفل وارفعوها هنا'
                       : 'Take photos during the event and upload them here'}
                   </p>
                   <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
